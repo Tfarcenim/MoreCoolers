@@ -63,6 +63,22 @@ public class ForgePlatformHelper implements IPlatformHelper {
     }
 
     @Override
+    public <C extends CoolerBlockEntity> C iron(BlockPos pos, BlockState state) {
+        return (C) CoolerBlockEntityForge.iron(pos,state);
+    }
+
+    @Override
+    public <C extends CoolerBlockEntity> C gold(BlockPos pos, BlockState state) {
+        return (C) CoolerBlockEntityForge.gold(pos,state);
+    }
+
+    @Override
+    public <C extends CoolerBlockEntity> C diamond(BlockPos pos, BlockState state) {
+        return (C) CoolerBlockEntityForge.diamond(pos,state);
+    }
+
+
+    @Override
     public MLConfig getConfig() {
         return MoreCoolersForge.SERVER;
     }

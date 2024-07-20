@@ -1,6 +1,8 @@
 package tfar.morecoolers.datagen;
 
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -17,6 +19,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        simpleBlock(ModBlocks.COPPER_COOLER,models().getBuilder("copper_cooler").parent(COOLER));
+        cooler(ModBlocks.COPPER_COOLER);
+        cooler(ModBlocks.IRON_COOLER);
+        cooler(ModBlocks.GOLD_COOLER);
+        cooler(ModBlocks.DIAMOND_COOLER);
+
+
     }
+
+    protected void cooler(Block block) {
+        String name = BuiltInRegistries.BLOCK.getKey(block).getPath();
+        simpleBlock(block,models().getBuilder(name).parent(COOLER));
+    }
+
 }

@@ -23,6 +23,20 @@ public class CoolerBlockEntityForge extends CoolerBlockEntity {
         return new CoolerBlockEntityForge(ModBlockEntities.COPPER_COOLER,pos,state);
     }
 
+    public static CoolerBlockEntityForge iron(BlockPos pos,BlockState state) {
+        return new CoolerBlockEntityForge(ModBlockEntities.IRON_COOLER,pos,state);
+    }
+
+    public static CoolerBlockEntityForge gold(BlockPos pos,BlockState state) {
+        return new CoolerBlockEntityForge(ModBlockEntities.GOLD_COOLER,pos,state);
+    }
+
+
+    public static CoolerBlockEntityForge diamond(BlockPos pos,BlockState state) {
+        return new CoolerBlockEntityForge(ModBlockEntities.DIAMOND_COOLER,pos,state);
+    }
+
+
     protected LazyOptional<IItemHandler> optional = LazyOptional.of(() -> new InvWrapper(container));
 
     @Nonnull

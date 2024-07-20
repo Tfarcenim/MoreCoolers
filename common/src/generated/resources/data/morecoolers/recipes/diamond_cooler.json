@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "b": {
+      "item": "minecraft:powder_snow_bucket"
+    },
+    "c": {
+      "tag": "forge:storage_blocks/diamond"
+    },
+    "g": {
+      "tag": "forge:glass_panes"
+    }
+  },
+  "pattern": [
+    "cgc",
+    "cbc",
+    "ccc"
+  ],
+  "result": {
+    "item": "morecoolers:diamond_cooler"
+  },
+  "show_notification": true
+}

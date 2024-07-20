@@ -1,3 +1,9 @@
-// 1.20.1	2024-07-20T18:40:07.034689	Block States: morecoolers
+// 1.20.1	2024-07-20T19:29:41.6302653	Block States: morecoolers
 ea68e21eae0e9adea87e01393786c51743fd0f26 assets/morecoolers/blockstates/copper_cooler.json
+d6d7855d76cc30020365ca580698b833b0993ede assets/morecoolers/blockstates/diamond_cooler.json
+6f627859159fce976ff541457afd770dfe7c6fd5 assets/morecoolers/blockstates/gold_cooler.json
+3091ca4a1858052196ecdbb58f142b2dabec18ac assets/morecoolers/blockstates/iron_cooler.json
 41e0177f1b6cb6705833d0870c70e8bbbb0e4099 assets/morecoolers/models/block/copper_cooler.json
+41e0177f1b6cb6705833d0870c70e8bbbb0e4099 assets/morecoolers/models/block/diamond_cooler.json
+41e0177f1b6cb6705833d0870c70e8bbbb0e4099 assets/morecoolers/models/block/gold_cooler.json
+41e0177f1b6cb6705833d0870c70e8bbbb0e4099 assets/morecoolers/models/block/iron_cooler.json

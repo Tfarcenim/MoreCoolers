@@ -1,1 +1,9 @@
-// 1.20.1	2024-07-20T18:18:08.5424119	Recipes
+// 1.20.1	2024-07-20T19:29:41.6332647	Recipes
+5de1c0d6037ba4c49770aa555a0a50cf298f3170 data/morecoolers/advancements/recipes/building_blocks/copper_cooler.json
+8eb8239c5333df2f26995b4ae6eb7e99b9d3ff25 data/morecoolers/advancements/recipes/building_blocks/diamond_cooler.json
+c15da44a4ef19f765be4b6526b39d321e1da59de data/morecoolers/advancements/recipes/building_blocks/gold_cooler.json
+9245c1c980aecdba40a6be0514de0b6ac3fd646c data/morecoolers/advancements/recipes/building_blocks/iron_cooler.json
+dbfe3e3cd87a07c70289d6f5a565a32c1bba2ad0 data/morecoolers/recipes/copper_cooler.json
+ae5d37825a74ea6d9c7786731fd3d40dc2f9822e data/morecoolers/recipes/diamond_cooler.json
+838be85273dcf5932410708cef0a98c970b42dca data/morecoolers/recipes/gold_cooler.json
+a7682c7aca3f98d98f3d2faf2b6aecf9d5eb25af data/morecoolers/recipes/iron_cooler.json

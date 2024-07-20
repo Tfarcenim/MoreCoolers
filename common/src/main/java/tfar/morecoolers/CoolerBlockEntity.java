@@ -4,10 +4,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.Container;
-import net.minecraft.world.LockCode;
-import net.minecraft.world.MenuProvider;
-import net.minecraft.world.SimpleContainer;
+import net.minecraft.world.*;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -20,7 +17,7 @@ import org.jetbrains.annotations.Nullable;
 public class CoolerBlockEntity extends BlockEntity implements MenuProvider {
 
     protected final int rows;
-    protected final Container container;
+    protected final SimpleContainer container;
     @Nullable
     private Component name;
     public CoolerBlockEntity(CoolerBlockEntityType<?> type, BlockPos $$1, BlockState $$2) {
@@ -87,6 +84,7 @@ public class CoolerBlockEntity extends BlockEntity implements MenuProvider {
         if (pTag.contains("CustomName", Tag.TAG_STRING)) {
             this.name = Component.Serializer.fromJson(pTag.getString("CustomName"));
         }
+        ContainerHelper.saveAllItems(pTag, container.items);
 
     }
 
@@ -95,6 +93,7 @@ public class CoolerBlockEntity extends BlockEntity implements MenuProvider {
         if (this.name != null) {
             pTag.putString("CustomName", Component.Serializer.toJson(this.name));
         }
+        ContainerHelper.saveAllItems(pTag, container.items);
 
     }
 

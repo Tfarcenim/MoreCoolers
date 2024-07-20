@@ -19,7 +19,6 @@ public class ModLangProvider extends LanguageProvider {
         super(output, MoreCoolers.MOD_ID, "en_us");
     }
 
-
     static final Set<Item> exclude = new HashSet<>();
 
     @Override

@@ -44,6 +44,10 @@ public interface IPlatformHelper {
 
 
     <C extends CoolerBlockEntity> C copper(BlockPos pos, BlockState state);
+    <C extends CoolerBlockEntity> C iron(BlockPos pos, BlockState state);
+    <C extends CoolerBlockEntity> C gold(BlockPos pos, BlockState state);
+    <C extends CoolerBlockEntity> C diamond(BlockPos pos, BlockState state);
+
     MLConfig getConfig();
 
 }

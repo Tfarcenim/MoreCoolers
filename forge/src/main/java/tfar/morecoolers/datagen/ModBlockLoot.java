@@ -9,6 +9,9 @@ public class ModBlockLoot extends VanillaBlockLoot {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.COPPER_COOLER);
+        dropSelf(ModBlocks.IRON_COOLER);
+        dropSelf(ModBlocks.GOLD_COOLER);
+        dropSelf(ModBlocks.DIAMOND_COOLER);
     }
 
     @Override

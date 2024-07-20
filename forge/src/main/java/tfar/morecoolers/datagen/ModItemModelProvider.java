@@ -22,6 +22,9 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         makeSimpleBlockItem(ModItems.COPPER_COOLER);
+        makeSimpleBlockItem(ModItems.IRON_COOLER);
+        makeSimpleBlockItem(ModItems.GOLD_COOLER);
+        makeSimpleBlockItem(ModItems.DIAMOND_COOLER);
     }
 
     protected void makeOneLayerItem(Item item, ResourceLocation texture) {

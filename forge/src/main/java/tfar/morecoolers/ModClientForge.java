@@ -13,6 +13,9 @@ public class ModClientForge {
 
     static void setup(FMLClientSetupEvent event) {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.COPPER_COOLER, RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.IRON_COOLER, RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GOLD_COOLER, RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DIAMOND_COOLER, RenderType.translucent());
     }
 
 }

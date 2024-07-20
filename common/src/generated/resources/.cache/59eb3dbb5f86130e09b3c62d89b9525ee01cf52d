@@ -1,2 +1,5 @@
-// 1.20.1	2024-07-20T18:18:08.5424119	Loot Tables
+// 1.20.1	2024-07-20T19:29:41.6322642	Loot Tables
 771bd1cd673a5e4cd271c0c35b278f27d474d1ab data/morecoolers/loot_tables/blocks/copper_cooler.json
+38ee096b5ad2f559f3dfdb6b9d1ed36372dd941b data/morecoolers/loot_tables/blocks/diamond_cooler.json
+06517e386f422fe235c315a95a6f90e633e48865 data/morecoolers/loot_tables/blocks/gold_cooler.json
+2439e6b0c3ec69304474f662fca682881df5ad9d data/morecoolers/loot_tables/blocks/iron_cooler.json

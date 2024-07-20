@@ -1,3 +1,6 @@
 {
-  "block.morecoolers.copper_cooler": "Copper Cooler"
+  "block.morecoolers.copper_cooler": "Copper Cooler",
+  "block.morecoolers.diamond_cooler": "Diamond Cooler",
+  "block.morecoolers.gold_cooler": "Gold Cooler",
+  "block.morecoolers.iron_cooler": "Iron Cooler"
 }
