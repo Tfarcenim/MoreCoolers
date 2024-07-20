@@ -9,6 +9,7 @@ import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import tfar.morecoolers.MoreCoolers;
+import tfar.morecoolers.init.ModItems;
 
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -20,7 +21,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-
+        makeSimpleBlockItem(ModItems.COPPER_COOLER);
     }
 
     protected void makeOneLayerItem(Item item, ResourceLocation texture) {
@@ -31,6 +32,17 @@ public class ModItemModelProvider extends ItemModelProvider {
             System.out.println("no texture for " + texture + " found, skipping");
         }
     }
+
+    protected void makeSimpleBlockItem(Item item, ResourceLocation loc) {
+        String s = BuiltInRegistries.ITEM.getKey(item).toString();
+        getBuilder(s)
+                .parent(new ModelFile.UncheckedModelFile(loc));
+    }
+
+    protected void makeSimpleBlockItem(Item item) {
+        makeSimpleBlockItem(item, MoreCoolers.id("block/" + BuiltInRegistries.ITEM.getKey(item).getPath()));
+    }
+
 
     protected void makeOneLayerItem(Item item) {
         ResourceLocation texture = BuiltInRegistries.ITEM.getKey(item);

@@ -23,7 +23,7 @@ public class CoolerBlockEntityForge extends CoolerBlockEntity {
         return new CoolerBlockEntityForge(ModBlockEntities.COPPER_COOLER,pos,state);
     }
 
-    protected LazyOptional<IItemHandler> optional;
+    protected LazyOptional<IItemHandler> optional = LazyOptional.of(() -> new InvWrapper(container));
 
     @Nonnull
     @Override

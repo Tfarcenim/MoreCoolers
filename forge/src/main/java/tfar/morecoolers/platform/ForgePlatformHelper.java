@@ -41,7 +41,7 @@ public class ForgePlatformHelper implements IPlatformHelper {
     }
 
     @Override
-    public <F> void registerAll(Class<?> clazz, Registry<? super F> registry, Class<F> filter) {
+    public <F> void registerAll(Class<?> clazz, Registry<F> registry, Class<F> filter) {
         List<Pair<ResourceLocation, Supplier<?>>> list = MoreCoolersForge.registerLater.computeIfAbsent(registry, k -> new ArrayList<>());
         for (Field field : clazz.getFields()) {
             MappedRegistry<?> forgeRegistry = (MappedRegistry<?>) registry;

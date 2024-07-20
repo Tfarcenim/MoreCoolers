@@ -40,7 +40,9 @@ public interface IPlatformHelper {
         return isDevelopmentEnvironment() ? "development" : "production";
     }
 
-    <F> void registerAll(Class<?> clazz, Registry<? super F> registry, Class<F> filter);
+    <F> void registerAll(Class<?> clazz, Registry<F> registry, Class<F> filter);
+
+
     <C extends CoolerBlockEntity> C copper(BlockPos pos, BlockState state);
     MLConfig getConfig();
 

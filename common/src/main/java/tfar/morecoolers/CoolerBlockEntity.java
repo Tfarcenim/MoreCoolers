@@ -60,19 +60,19 @@ public class CoolerBlockEntity extends BlockEntity implements MenuProvider {
     public AbstractContainerMenu createMenu(int i, Inventory inventory, Player player) {
         switch (rows) {
             case 1 -> {
-                return new ChestMenu(MenuType.GENERIC_9x1,i,inventory,container,rows * 9);
+                return new ChestMenu(MenuType.GENERIC_9x1,i,inventory,container,rows);
             }
             case 2 -> {
-                return new ChestMenu(MenuType.GENERIC_9x2,i,inventory,container,rows * 9);
+                return new ChestMenu(MenuType.GENERIC_9x2,i,inventory,container,rows);
             }
             case 3 -> {
-                return new ChestMenu(MenuType.GENERIC_9x3,i,inventory,container,rows * 9);
+                return new ChestMenu(MenuType.GENERIC_9x3,i,inventory,container,rows);
             }
             case 4 -> {
-                return new ChestMenu(MenuType.GENERIC_9x4,i,inventory,container,rows * 9);
+                return new ChestMenu(MenuType.GENERIC_9x4,i,inventory,container,rows);
             }
             case 5 -> {
-                return new ChestMenu(MenuType.GENERIC_9x5,i,inventory,container,rows * 9);
+                return new ChestMenu(MenuType.GENERIC_9x5,i,inventory,container,rows);
             }
             case 6 -> {
                 return new ChestMenu(MenuType.GENERIC_9x6,i,inventory,container,rows * 9);
