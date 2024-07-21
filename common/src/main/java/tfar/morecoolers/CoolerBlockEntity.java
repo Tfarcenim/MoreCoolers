@@ -23,7 +23,13 @@ public class CoolerBlockEntity extends BlockEntity implements MenuProvider {
     public CoolerBlockEntity(CoolerBlockEntityType<?> type, BlockPos $$1, BlockState $$2) {
         super(type, $$1, $$2);
         rows = type.getRows();
-        container = new SimpleContainer(rows*9);
+        container = new SimpleContainer(rows*9) {
+            @Override
+            public void setChanged() {
+                super.setChanged();
+                CoolerBlockEntity.this.setChanged();
+            }
+        };
     }
 
     public int calculateRedstone() {
@@ -84,7 +90,7 @@ public class CoolerBlockEntity extends BlockEntity implements MenuProvider {
         if (pTag.contains("CustomName", Tag.TAG_STRING)) {
             this.name = Component.Serializer.fromJson(pTag.getString("CustomName"));
         }
-        ContainerHelper.saveAllItems(pTag, container.items);
+        ContainerHelper.loadAllItems(pTag, container.items);
 
     }
 

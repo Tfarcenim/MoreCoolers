@@ -3,7 +3,9 @@ package tfar.morecoolers;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.common.ForgeConfigSpec;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -14,6 +16,7 @@ import net.minecraftforge.fml.loading.FMLEnvironment;
 import net.minecraftforge.registries.RegisterEvent;
 import org.apache.commons.lang3.tuple.Pair;
 import tfar.morecoolers.datagen.ModDatagen;
+import tfar.morecoolers.init.ModBlocks;
 import tfar.morecoolers.platform.MLConfig;
 
 import java.util.HashMap;
@@ -36,6 +39,7 @@ public class MoreCoolersForge {
         if (FMLEnvironment.dist.isClient()) {
               ModClientForge.init(bus);
         }
+        bus.addListener(this::creativeTab);
         // Use Forge to bootstrap the Common mod.
         MoreCoolers.init();
     }
@@ -51,6 +55,16 @@ public class MoreCoolersForge {
             for (Pair<ResourceLocation, Supplier<?>> pair : toRegister) {
                 e.register((ResourceKey<? extends Registry<Object>>) registry.key(), pair.getLeft(), (Supplier<Object>) pair.getValue());
             }
+        }
+    }
+
+    private void creativeTab(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+            event.accept(() -> ModBlocks.COPPER_COOLER);
+            event.accept(() -> ModBlocks.IRON_COOLER);
+            event.accept(() -> ModBlocks.GOLD_COOLER);
+            event.accept(() -> ModBlocks.DIAMOND_COOLER);
+
         }
     }
 
