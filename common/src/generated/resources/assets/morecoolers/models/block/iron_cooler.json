@@ -1,3 +1,9 @@
 {
-  "parent": "morecoolers:block/cooler"
+  "parent": "morecoolers:block/cooler",
+  "textures": {
+    "1": "morecoolers:block/iron_cooler_bottom",
+    "3": "morecoolers:block/iron_cooler_side",
+    "4": "morecoolers:block/iron_cooler_side2",
+    "particle": "morecoolers:block/iron_cooler_bottom"
+  }
 }

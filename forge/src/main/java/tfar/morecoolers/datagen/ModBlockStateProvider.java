@@ -29,7 +29,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     protected void cooler(Block block) {
         String name = BuiltInRegistries.BLOCK.getKey(block).getPath();
-        simpleBlock(block,models().getBuilder(name).parent(COOLER));
+        simpleBlock(block,models().getBuilder(name).parent(COOLER)
+                .texture("1",modLoc("block/"+name+"_bottom"))
+                .texture("3",modLoc("block/"+name+"_side"))
+                .texture("4",modLoc("block/"+name+"_side2"))
+                .texture("particle",modLoc("block/"+name+"_bottom"))
+        );
     }
 
 }
